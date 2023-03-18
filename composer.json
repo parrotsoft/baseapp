@@ -8,6 +8,11 @@
             "Mlopez\\BaseApp\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Mlopez\\BaseApp\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Miguel Angel Lopez Ariza",
