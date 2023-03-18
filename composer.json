@@ -1,0 +1,43 @@
+{
+    "name": "mlopez/base-app",
+    "type": "library",
+    "keywords": ["laravel", "colombia", "departamentos", "ciudades"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mlopez\\BaseApp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Miguel Angel Lopez Ariza",
+            "email": "lopezarizamiguel@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mlopez\\BaseApp\\BaseAppServiceProvider"
+            ],
+            "migrations": [
+                "src/database/migrations/2014_05_16_100000_create_departments_table.php",
+                "src/database/migrations/2014_05_16_100001_create_cities_table.php"
+            ],
+            "models": [
+                "src/Models/Department.php",
+                "src/Models/City.php"
+            ],
+            "seeds": [
+                "src/database/seeds/DepartmentsSeeder.php",
+                "src/database/seeds/CitiesSeeder.php"
+            ],
+            "commands": [
+                "src/Console/Commands/LoadBaseAppCommand.php"
+            ]
+        }
+    },
+    "require": {
+        "php": ">7.2",
+        "illuminate/support": "^10.0"
+    }
+}
